@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/sawankumar-tak-au7/travel-agency-site#readme",
   "dependencies": {
-    "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
-    "postcss-hexrgba": "^2.0.0"
+    "postcss-hexrgba": "^2.0.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

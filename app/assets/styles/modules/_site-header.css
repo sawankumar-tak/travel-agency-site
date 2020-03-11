@@ -9,6 +9,10 @@
   }
   @mixin atMedium {
     background-color: rgba($mainBlue, 0.3);
+    position: fixed;
+    &--dark {
+      background-color: rgba(23, 51, 72, 0.85);
+    }
   }
   &__btn-container {
     @mixin atMedium {
@@ -23,10 +27,14 @@
     left: 50%;
     z-index: 10;
     transform: translateX(-50%);
+    transition: transform 0.3s ease-out;
     @mixin atMedium {
-      padding: 25px 36px;
       left: auto;
       transform: translateX(0);
+      .site-header--dark & {
+        transform: scale(0.6);
+        margin-top: -13px;
+      }
     }
   }
   &__menu-content {
