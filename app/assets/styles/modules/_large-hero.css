@@ -13,6 +13,7 @@
     transform: translateY(-50%);
   }
   &__title {
+    padding-top: 16px;
     font-weight: 700;
     color: $mainBlue;
     font-size: 2.1rem;
