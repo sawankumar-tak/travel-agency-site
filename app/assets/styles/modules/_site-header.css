@@ -1,0 +1,95 @@
+.site-header {
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  transition: background-color 0.3s ease-out;
+  &--is-expanded {
+    background-color: rgba($mainBlue, 0.55);
+  }
+  @mixin atMedium {
+    background-color: rgba($mainBlue, 0.3);
+    position: fixed;
+    &--dark {
+      background-color: rgba(23, 51, 72, 0.85);
+    }
+  }
+  &__btn-container {
+    @mixin atMedium {
+      float: right;
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 0;
+    background-color: $mainBlue;
+    padding: 13px 29px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease-out;
+    @mixin atMedium {
+      left: auto;
+      transform: translateX(0);
+      .site-header--dark & {
+        transform: scale(0.6);
+        margin-top: -13px;
+      }
+    }
+  }
+  &__menu-content {
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+    position: relative;
+    z-index: -10;
+    padding-top: 90px;
+    text-align: center;
+
+    @mixin atMedium {
+      opacity: 1;
+      padding-top: 0;
+      z-index: 1;
+      transform: scale(1);
+    }
+    &--is-visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  &__menu-icon {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    @mixin atMedium {
+      display: none;
+    }
+    &__top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+    }
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+    }
+    &__bottom {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+}
